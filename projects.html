@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">ShortyBatou</div>
+                <ul class="nav-links">
+                    <li><a href="index.html">About</a></li>
+                    <li><a href="software.html">Software</a></li>
+                    <li><a href="research.html">Research</a></li>
+                    <li><a href="projects.html" class="active">Projects</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="projects-hero">
+            <div class="container">
+                <h1>Projects</h1>
+                <p class="subtitle">Personal projects and experiments in computer science</p>
+            </div>
+        </section>
+
+        <!-- Category Filters -->
+        <section class="project-filters">
+            <div class="container">
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="gpu">GPU</button>
+                    <button class="filter-btn" data-filter="simulation">Simulation</button>
+                    <button class="filter-btn" data-filter="rendering">Rendering</button>
+                    <button class="filter-btn" data-filter="other">Other</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Grid -->
+        <section class="projects-portfolio">
+            <div class="container">
+                <div class="projects-grid">
+                    <!-- GPU Project 1 -->
+                    <div class="project-card" data-category="gpu">
+                        <div class="project-image">
+                            <img src="images/project-gpu-1.jpg" alt="GPU Project 1" />
+                            <a href="project-detail.html?id=gpu-1" class="project-overlay">
+                                <span>View Details →</span>
+                            </a>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-category">GPU</span>
+                            <h3><a href="project-detail.html?id=gpu-1">CUDA Particle System</a></h3>
+                            <p>High-performance particle simulation using CUDA for interactive effects</p>
+                            <div class="project-tags">
+                                <span class="tag">CUDA</span>
+                                <span class="tag">C++</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Simulation Project 1 -->
+                    <div class="project-card" data-category="simulation">
+                        <div class="project-image">
+                            <img src="images/project-sim-1.jpg" alt="Simulation Project 1" />
+                            <a href="project-detail.html?id=sim-1" class="project-overlay">
+                                <span>View Details →</span>
+                            </a>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-category">Simulation</span>
+                            <h3><a href="project-detail.html?id=sim-1">Fluid Dynamics</a></h3>
+                            <p>Real-time fluid simulation using grid-based methods and GPU acceleration</p>
+                            <div class="project-tags">
+                                <span class="tag">OpenGL</span>
+                                <span class="tag">GLSL</span>
+                                <span class="tag">Physics</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Rendering Project 1 -->
+                    <div class="project-card" data-category="rendering">
+                        <div class="project-image">
+                            <img src="images/project-render-1.jpg" alt="Rendering Project 1" />
+                            <a href="project-detail.html?id=render-1" class="project-overlay">
+                                <span>View Details →</span>
+                            </a>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-category">Rendering</span>
+                            <h3><a href="project-detail.html?id=render-1">Path Tracer</a></h3>
+                            <p>Monte Carlo path tracing renderer with advanced material support</p>
+                            <div class="project-tags">
+                                <span class="tag">C++</span>
+                                <span class="tag">Ray Tracing</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- GPU Project 2 -->
+                    <div class="project-card" data-category="gpu">
+                        <div class="project-image">
+                            <img src="images/project-gpu-2.jpg" alt="GPU Project 2" />
+                            <a href="project-detail.html?id=gpu-2" class="project-overlay">
+                                <span>View Details →</span>
+                            </a>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-category">GPU</span>
+                            <h3><a href="project-detail.html?id=gpu-2">Compute Shaders</a></h3>
+                            <p>Advanced GPU computing techniques using compute shaders for optimization</p>
+                            <div class="project-tags">
+                                <span class="tag">GLSL</span>
+                                <span class="tag">GPU Computing</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Rendering Project 2 -->
+                    <div class="project-card" data-category="rendering">
+                        <div class="project-image">
+                            <img src="images/project-render-2.jpg" alt="Rendering Project 2" />
+                            <a href="project-detail.html?id=render-2" class="project-overlay">
+                                <span>View Details →</span>
+                            </a>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-category">Rendering</span>
+                            <h3><a href="project-detail.html?id=render-2">ShaderToy Experiments</a></h3>
+                            <p>Creative shader programming and procedural generation experiments</p>
+                            <div class="project-tags">
+                                <span class="tag">GLSL</span>
+                                <span class="tag">Procedural</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Other Project -->
+                    <div class="project-card" data-category="other">
+                        <div class="project-image">
+                            <img src="images/project-other-1.jpg" alt="Other Project" />
+                            <a href="project-detail.html?id=other-1" class="project-overlay">
+                                <span>View Details →</span>
+                            </a>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-category">Other</span>
+                            <h3><a href="project-detail.html?id=other-1">Miscellaneous</a></h3>
+                            <p>Various experiments and side projects in computer science</p>
+                            <div class="project-tags">
+                                <span class="tag">Multiple</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 ShortyBatou. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="https://github.com/ShortyBatou">GitHub</a>
+                <a href="https://twitter.com">Twitter</a>
+                <a href="mailto:your.email@example.com">Email</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
