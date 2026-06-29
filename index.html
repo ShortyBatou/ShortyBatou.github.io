@@ -1,250 +1,367 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bastien Saillant - Portfolio</title>
+    <title>Bastien Saillant</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="container">
-                <div class="logo">Bastien Saillant</div>
-                <ul class="nav-links">
-                    <li><a href="index.html" class="active">About</a></li>
-                    <li><a href="software.html">Software</a></li>
-                    <li><a href="research.html">Research</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                </ul>
+
+    <!-- NAV BAR -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo"></a>
+            <ul class="nav-links">
+                <li><a href="#experience">Expériences</a></li>
+                <li><a href="#education">Formations</a></li>
+                <li><a href="#skills">Compétences</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header id="hero">
+        <div class="container">
+            <h1>Bastien Saillant</h1>
+            <p class="subtitle">Docteur en Informatique Graphique & Simulation Temps Réel</p>
+            <div class="social-links">
+                <a href="https://github.com/BastienSaillant" target="_blank">GitHub</a>
+                <a href="https://linkedin.com/in/bastien-saillant" target="_blank">LinkedIn</a>
+                <a href="https://cv.hal.science/bastien-saillant" target="_blank">HAL (Publications)</a>
             </div>
-        </nav>
+        </div>
     </header>
 
-    <main>
-        <!-- Personal Info Section -->
-        <section class="personal-info">
-            <div class="container">
-                <div class="profile-header">
-                    <div class="profile-pic">
-                        <img src="images/profile.jpg" alt="Profile Picture" />
-                    </div>
-                    <div class="profile-content">
-                        <h1>Bastien Saillant</h1>
-                        <p class="title">Doctor in Computer Graphics | Real-Time Soft Body Simulation</p>
-                        <p class="bio">Specializing in interactive simulation of deformable objects using high-order finite elements and local resolution methods. Passionate about computer graphics, physics simulation, and computational science.</p>
-                        <div class="profile-links">
-                            <a href="https://liris.cnrs.fr/page-membre/bastien-saillant" target="_blank" class="profile-link">LIRIS Profile</a>
-                            <a href="https://cv.hal.science/bastien-saillant" target="_blank" class="profile-link">HAL CV</a>
-                            <a href="mailto:bastiensaillant@gmail.com" class="profile-link">bastiensaillant@gmail.com</a>
+    <!-- EXPÉRIENCES PROFESSIONNELLES -->
+    <section id="experience">
+        <div class="container">
+            <h2>Expériences Professionnelles</h2>
+            <div class="timeline">
+                
+                <!-- Expérience 1 -->
+                <details class="timeline-entry experience-entry">
+                    <summary class="timeline-header">
+                        <div class="timeline-header-main">
+                            <div class="timeline-title-area">
+                                <span class="timeline-title">Doctorant</span>
+                                <span class="timeline-sep">|</span>
+                                <span class="timeline-subtitle">LIRIS - Origami (INSA Lyon)</span>
+                            </div>
+                            <span class="timeline-date">2022 - 2026</span>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Education Section -->
-        <section class="education-experience">
-            <div class="container">
-                <h2>Education</h2>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-marker"></div>
-                        <div class="timeline-header">
-                            <h3>PhD in Computer Graphics</h3>
-                            <p class="date">2022 - 2026 • INSA Lyon</p>
-                        </div>
-                        <button class="timeline-toggle" aria-expanded="false">
-                            <span class="toggle-text">Show details</span>
-                            <span class="toggle-icon">▼</span>
-                        </button>
-                        <div class="timeline-description" style="display: none;">
-                            <p>High-order finite elements for interactive simulation of deformable objects with local resolution methods</p>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item">
-                        <div class="timeline-marker"></div>
-                        <div class="timeline-header">
-                            <h3>Master's Degree in Computer Science</h3>
-                            <p class="date">2020 - 2022 • Université Claude-Bernard Lyon 1</p>
-                        </div>
-                        <button class="timeline-toggle" aria-expanded="false">
-                            <span class="toggle-text">Show details</span>
-                            <span class="toggle-icon">▼</span>
-                        </button>
-                        <div class="timeline-description" style="display: none;">
-                            <p>Specialization: Computer Graphics and 3D Development (Imagerie et Développement 3D)</p>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item">
-                        <div class="timeline-marker"></div>
-                        <div class="timeline-header">
-                            <h3>Bachelor's Degree in Computer Science</h3>
-                            <p class="date">2019 - 2020 • Université Claude-Bernard Lyon 1</p>
-                        </div>
-                        <button class="timeline-toggle" aria-expanded="false">
-                            <span class="toggle-text">Show details</span>
-                            <span class="toggle-icon">▼</span>
-                        </button>
-                        <div class="timeline-description" style="display: none;">
-                            <p>Foundation in computer science fundamentals and programming</p>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item">
-                        <div class="timeline-marker"></div>
-                        <div class="timeline-header">
-                            <h3>DUT in Computer Science</h3>
-                            <p class="date">2017 - 2019 • IUT Lyon 1</p>
-                        </div>
-                        <button class="timeline-toggle" aria-expanded="false">
-                            <span class="toggle-text">Show details</span>
-                            <span class="toggle-icon">▼</span>
-                        </button>
-                        <div class="timeline-description" style="display: none;">
-                            <p>University Diploma in Technology - Foundation in computer science and software development</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Experience Section -->
-        <section class="education-experience">
-            <div class="container">
-                <h2>Experience</h2>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-marker"></div>
-                        <div class="timeline-header">
-                            <h3>Research Scientist - Computer Graphics</h3>
-                            <p class="date">2022 - Present • LIRIS Research Facility, CNRS</p>
-                        </div>
-                        <button class="timeline-toggle" aria-expanded="false">
-                            <span class="toggle-text">Show details</span>
-                            <span class="toggle-icon">▼</span>
-                        </button>
-                        <div class="timeline-description" style="display: none;">
-                            <p>Doctoral research in computer graphics focusing on real-time simulation of deformable objects using high-order finite elements. Published findings in international conferences including Computer Graphics International (CGI) and Computer Animation and Social Agents (CASA).</p>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item">
-                        <div class="timeline-marker"></div>
-                        <div class="timeline-header">
-                            <h3>President - LIRIS-Origami Reading Group</h3>
-                            <p class="date">2023 - Present • LIRIS, CNRS</p>
-                        </div>
-                        <button class="timeline-toggle" aria-expanded="false">
-                            <span class="toggle-text">Show details</span>
-                            <span class="toggle-icon">▼</span>
-                        </button>
-                        <div class="timeline-description" style="display: none;">
-                            <p>Leading the LIRIS-Origami reading group on geometric data learning and computer graphics topics. Organized and presented 11 research presentations covering cutting-edge topics in graphics and simulation.</p>
-                            <a href="https://projet.liris.cnrs.fr/origami/topics/gdl/" target="_blank" class="description-link">View Reading Group</a>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item">
-                        <div class="timeline-marker"></div>
-                        <div class="timeline-header">
-                            <h3>Software Development Internship</h3>
-                            <p class="date">2019 • Onyx 1eDoc</p>
-                        </div>
-                        <button class="timeline-toggle" aria-expanded="false">
-                            <span class="toggle-text">Show details</span>
-                            <span class="toggle-icon">▼</span>
-                        </button>
-                        <div class="timeline-description" style="display: none;">
-                            <p>Developed and deployed a web-based application integrating Enterprise Resource Planning (ERP) and Electronic Document Management (EDM) systems via web services. Gained practical experience in full-stack web development and enterprise software architecture.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Skills Section -->
-        <section class="skills">
-            <div class="container">
-                <h2>Skills & Technologies</h2>
-                <div class="skills-grid">
-                    <div class="skill-category">
-                        <h3>Programming Languages</h3>
+                        <div class="timeline-arrow"></div>
+                    </summary>
+                    <div class="timeline-body">
+                        <p>Recherche en informatique graphique pour le développement de technologies de simulation en temps réel d'objets déformables.</p>
+                        <ul class="timeline-list">
+                            <li><strong>Publications :</strong> Présentation de deux papiers dans des conférences internationales majeures avec comité de relecture :</li>
+                            <li>Présentation à Computer Graphics International 2024 (CGI)</li>
+                            <li>Présentation à Computer Animation and Social Agents 2025 (CASA)</li>
+                            <li><strong>Accès travaux :</strong> Retrouvez mes publications sur mon profil HAL.</li>
+                        </ul>
                         <div class="skills-list">
                             <span class="skill-badge">C++</span>
-                            <span class="skill-badge">Python</span>
-                            <span class="skill-badge">GLSL</span>
-                            <span class="skill-badge">JavaScript</span>
-                        </div>
-                    </div>
-                    <div class="skill-category">
-                        <h3>Graphics & Physics</h3>
-                        <div class="skills-list">
-                            <span class="skill-badge">OpenGL</span>
                             <span class="skill-badge">CUDA</span>
-                            <span class="skill-badge">Physics Simulation</span>
-                            <span class="skill-badge">Finite Elements</span>
-                            <span class="skill-badge">Real-Time Rendering</span>
+                            <span class="skill-badge">Simulation temps réel</span>
+                            <span class="skill-badge">Recherche & Développement</span>
+                            <span class="skill-badge">Rédaction scientifique</span>
                         </div>
                     </div>
-                    <div class="skill-category">
-                        <h3>Tools & Frameworks</h3>
+                </details>
+
+                <!-- Expérience 2 -->
+                <details class="timeline-entry experience-entry">
+                    <summary class="timeline-header">
+                        <div class="timeline-header-main">
+                            <div class="timeline-title-area">
+                                <span class="timeline-title">Enseignement (ACE)</span>
+                                <span class="timeline-sep">|</span>
+                                <span class="timeline-subtitle">Université Lyon 1</span>
+                            </div>
+                            <span class="timeline-date">2022 - 2025</span>
+                        </div>
+                        <div class="timeline-arrow"></div>
+                    </summary>
+                    <div class="timeline-body">
+                        <p>Activités Complémentaires d'Enseignement (ACE) réalisées en parallèle de la thèse (volume horaire total de 192 heures).</p>
+                        <ul class="timeline-list">
+                            <li><strong>Public visé :</strong> Étudiants de la Licence 1 au Master 2.</li>
+                            <li><strong>Sujets enseignés :</strong> Programmation C++, bases de l'informatique graphique (techniques de rendu 3D, simulation physique, structures de données géométriques, etc.).</li>
+                        </ul>
                         <div class="skills-list">
-                            <span class="skill-badge">Git</span>
-                            <span class="skill-badge">CMake</span>
-                            <span class="skill-badge">VS Code</span>
-                            <span class="skill-badge">Docker</span>
-                            <span class="skill-badge">LaTeX</span>
+                            <span class="skill-badge">Pédagogie</span>
+                            <span class="skill-badge">C++</span>
+                            <span class="skill-badge">Informatique Graphique</span>
+                            <span class="skill-badge">Licence / Master</span>
                         </div>
                     </div>
-                </div>
-            </div>
-        </section>
+                </details>
 
-        <!-- Featured Projects Preview -->
-        <section class="featured-projects">
-            <div class="container">
-                <h2>Featured Projects</h2>
-                <div class="projects-preview-grid">
-                    <a href="projects.html#gpu" class="project-preview">
-                        <div class="preview-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
-                            <span class="preview-icon">🎮</span>
+                <!-- Expérience 3 -->
+                <details class="timeline-entry experience-entry">
+                    <summary class="timeline-header">
+                        <div class="timeline-header-main">
+                            <div class="timeline-title-area">
+                                <span class="timeline-title">Stagiaire Recherche</span>
+                                <span class="timeline-sep">|</span>
+                                <span class="timeline-subtitle">LIRIS - Origami</span>
+                            </div>
+                            <span class="timeline-date">2022 (6 mois)</span>
                         </div>
-                        <h3>GPU Computing</h3>
-                        <p>Explore advanced GPU techniques and CUDA programming</p>
-                    </a>
-                    <a href="projects.html#simulation" class="project-preview">
-                        <div class="preview-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
-                            <span class="preview-icon">⚛️</span>
+                        <div class="timeline-arrow"></div>
+                    </summary>
+                    <div class="timeline-body">
+                        <p>Développement et restructuration globale de l'architecture d'un simulateur médical destiné à la formation en rhumatologie (guidage d'aiguille sous échographie).</p>
+                        <ul class="timeline-list">
+                            <li><strong>Améliorations apportées :</strong> Refonte et optimisation du module de rendu échographique, de la simulation d'insertion et de la gestion du retour haptique.</li>
+                            <li><strong>Innovation :</strong> Formulation et intégration de nouvelles approches algorithmiques pour perfectionner le comportement des technologies existantes.</li>
+                        </ul>
+                        <div class="skills-list">
+                            <span class="skill-badge">Génie Logiciel</span>
+                            <span class="skill-badge">C++</span>
+                            <span class="skill-badge">OpenGL / GLSL</span>
+                            <span class="skill-badge">Haptique</span>
+                            <span class="skill-badge">Imagerie Médicale</span>
                         </div>
-                        <h3>Simulation</h3>
-                        <p>Physics simulations and computational science projects</p>
-                    </a>
-                    <a href="projects.html#rendering" class="project-preview">
-                        <div class="preview-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
-                            <span class="preview-icon">🎨</span>
-                        </div>
-                        <h3>Rendering</h3>
-                        <p>Computer graphics and visualization experiments</p>
-                    </a>
-                </div>
-            </div>
-        </section>
-    </main>
+                    </div>
+                </details>
 
+                <!-- Expérience 4 -->
+                <details class="timeline-entry experience-entry">
+                    <summary class="timeline-header">
+                        <div class="timeline-header-main">
+                            <div class="timeline-title-area">
+                                <span class="timeline-title">Président du GDL</span>
+                                <span class="timeline-sep">|</span>
+                                <span class="timeline-subtitle">Origami</span>
+                            </div>
+                            <span class="timeline-date">2024 - 2025</span>
+                        </div>
+                        <div class="timeline-arrow"></div>
+                    </summary>
+                    <div class="timeline-body">
+                        <p>Organisation et animation hebdomadaire du Groupe De Lecture (GDL) au sein de l'équipe de recherche ORIGAMI.</p>
+                        <ul class="timeline-list">
+                            <li><strong>Rôle :</strong> Coordination des sessions où chercheurs, doctorants et stagiaires partagent et analysent un papier ou une technologie de pointe.</li>
+                            <li><strong>Contributions :</strong> Animation personnelle de 11 présentations techniques ciblées (simulation, algorithmes de rendu, écriture de shaders complexes).</li>
+                        </ul>
+                        <div class="skills-list">
+                            <span class="skill-badge">Management</span>
+                            <span class="skill-badge">Communication</span>
+                            <span class="skill-badge">Veille technologique</span>
+                            <span class="skill-badge">Présentation technique</span>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- Expérience 5 -->
+                <details class="timeline-entry experience-entry">
+                    <summary class="timeline-header">
+                        <div class="timeline-header-main">
+                            <div class="timeline-title-area">
+                                <span class="timeline-title">Stagiaire Développement</span>
+                                <span class="timeline-sep">|</span>
+                                <span class="timeline-subtitle">Onyx 1eDoc</span>
+                            </div>
+                            <span class="timeline-date">2019 (4 mois)</span>
+                        </div>
+                        <div class="timeline-arrow"></div>
+                    </summary>
+                    <div class="timeline-body">
+                        <p>Conception, développement et mise en production d'applications web full-stack connectées aux systèmes ERP et de Gestion Électronique des Documents (GED).</p>
+                        <ul class="timeline-list">
+                            <li><strong>Stack technique :</strong> Déploiement basé sur l'architecture MEAN (MongoDB, Express, AngularJS et Node.js).</li>
+                        </ul>
+                        <div class="skills-list">
+                            <span class="skill-badge">MEAN Stack</span>
+                            <span class="skill-badge">Javascript</span>
+                            <span class="skill-badge">MongoDB</span>
+                            <span class="skill-badge">Web Services</span>
+                            <span class="skill-badge">Full-stack</span>
+                        </div>
+                    </div>
+                </details>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FORMATIONS -->
+    <section id="education">
+        <div class="container">
+            <h2>Formations</h2>
+            <div class="timeline">
+                
+                <!-- Formation 1 -->
+                <details class="timeline-entry education-entry">
+                    <summary class="timeline-header">
+                        <div class="timeline-header-main">
+                            <div class="timeline-title-area">
+                                <span class="timeline-title">Doctorat</span>
+                                <span class="timeline-sep">|</span>
+                                <span class="timeline-subtitle">Informatique graphique • INSA Lyon</span>
+                            </div>
+                            <span class="timeline-date">2022 - 2026</span>
+                        </div>
+                        <div class="timeline-arrow"></div>
+                    </summary>
+                    <div class="timeline-body">
+                        <ul class="timeline-list">
+                            <li><strong>Diplôme :</strong> Doctorat (PhD) en Informatique</li>
+                            <li><strong>Sujet de thèse :</strong> Simulation en temps réel d'objets déformables élastiques.</li>
+                            <li><strong>Recherche & Méthodes :</strong> Éléments Finis, Vertex Block Descent (VBD), eXtended Position Based Dynamics (XPBD).</li>
+                        </ul>
+                        <div class="skills-list">
+                            <span class="skill-badge">CUDA</span> 
+                            <span class="skill-badge">C++</span>
+                            <span class="skill-badge">OpenGL / GLSL</span>
+                            <span class="skill-badge">Moteur Physique</span>
+                            <span class="skill-badge">Algèbre linéaire</span>
+                            <span class="skill-badge">Géométrie</span>
+                            <span class="skill-badge">Éléments finis</span>
+                            <span class="skill-badge">Vertex Block Descent</span>
+                            <span class="skill-badge">XPBD</span>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- Formation 2 -->
+                <details class="timeline-entry education-entry">
+                    <summary class="timeline-header">
+                        <div class="timeline-header-main">
+                            <div class="timeline-title-area">
+                                <span class="timeline-title">Master</span>
+                                <span class="timeline-sep">|</span>
+                                <span class="timeline-subtitle">Informatique • Université Lyon 1</span>
+                            </div>
+                            <span class="timeline-date">2020 - 2022</span>
+                        </div>
+                        <div class="timeline-arrow"></div>
+                    </summary>
+                    <div class="timeline-body">
+                        <ul class="timeline-list">
+                            <li><strong>Diplôme :</strong> Master en Informatique (Bac+5)</li>
+                            <li><strong>Spécialité :</strong> Informatique graphique, rendu 3D, modélisation géométrique et physique.</li>
+                        </ul>
+                        <div class="skills-list">
+                            <span class="skill-badge">C++ / OpenGL</span>
+                            <span class="skill-badge">Rendu 3D</span>
+                            <span class="skill-badge">Simulation Physique</span>
+                            <span class="skill-badge">Calcul Haute Performance</span>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- Formation 3 -->
+                <details class="timeline-entry education-entry">
+                    <summary class="timeline-header">
+                        <div class="timeline-header-main">
+                            <div class="timeline-title-area">
+                                <span class="timeline-title">Licence</span>
+                                <span class="timeline-sep">|</span>
+                                <span class="timeline-subtitle">Informatique • Université Lyon 1</span>
+                            </div>
+                            <span class="timeline-date">2019 - 2020</span>
+                        </div>
+                        <div class="timeline-arrow"></div>
+                    </summary>
+                    <div class="timeline-body">
+                        <ul class="timeline-list">
+                            <li><strong>Diplôme :</strong> Licence en Informatique (Bac+3)</li>
+                            <li><strong>Projets notables :</strong> Introduction au développement 3D (Unity 3D) et structures de données complexes.</li>
+                        </ul>
+                        <div class="skills-list">
+                            <span class="skill-badge">C++ / Java</span>
+                            <span class="skill-badge">SQL</span>
+                            <span class="skill-badge">Algèbre linéaire</span>
+                            <span class="skill-badge">Structure de données</span>
+                            <span class="skill-badge">Unity 3D</span>
+                        </div>
+                    </div>
+                </details>
+                
+                <!-- Formation 4 -->
+                <details class="timeline-entry education-entry">
+                    <summary class="timeline-header">
+                        <div class="timeline-header-main">
+                            <div class="timeline-title-area">
+                                <span class="timeline-title">DUT</span>
+                                <span class="timeline-sep">|</span>
+                                <span class="timeline-subtitle">Informatique • IUT Lyon 1</span>
+                            </div>
+                            <span class="timeline-date">2017 - 2019</span>
+                        </div>
+                        <div class="timeline-arrow"></div>
+                    </summary>
+                    <div class="timeline-body">
+                        <ul class="timeline-list">
+                            <li><strong>Diplôme :</strong> Diplôme Universitaire de Technologie (Bac+2)</li>
+                            <li><strong>Socle de compétences :</strong> Algorithmie fondamentale, bases de données, architectures logicielles et pratiques Git collectives.</li>
+                        </ul>
+                        <div class="skills-list">
+                            <span class="skill-badge">C / C# / JS / PHP</span>
+                            <span class="skill-badge">Algorithmie</span>
+                            <span class="skill-badge">SQL</span>
+                            <span class="skill-badge">Git</span>
+                        </div>
+                    </div>
+                </details>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- COMPÉTENCES -->
+    <section id="skills">
+        <div class="container">
+            <h2>Compétences Techniques</h2>
+            <div class="skills-grid">
+                
+                <div class="skills-category">
+                    <h3>Langages de Programmation</h3>
+                    <div class="skills-list">
+                        <span class="skill-badge">C / C++</span>
+                        <span class="skill-badge">CUDA</span>
+                        <span class="skill-badge">GLSL</span>
+                        <span class="skill-badge">Python</span>
+                        <span class="skill-badge">C# / Java</span>
+                        <span class="skill-badge">SQL</span>
+                        
+                    </div>
+                </div>
+
+                <div class="skills-category">
+                    <h3>Modélisation & Simulation</h3>
+                    <div class="skills-list">
+                        <span class="skill-badge">OpenGL</span> 
+                        <span class="skill-badge">Simulation Physique</span>
+                        <span class="skill-badge">XPBD, VBD</span>
+
+                    </div>
+                </div>
+
+                <div class="skills-category">
+                    <h3>Outils & Environnements</h3>
+                    <div class="skills-list">
+                        <span class="skill-badge">Git</span>
+                        <span class="skill-badge">CMake</span>
+                        <span class="skill-badge">Unity 3D</span>
+                        <span class="skill-badge">CLion</span>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
     <footer>
         <div class="container">
-            <p>&copy; 2026 Bastien Saillant. All rights reserved.</p>
-            <div class="footer-links">
-                <a href="https://github.com/ShortyBatou">GitHub</a>
-                <a href="mailto:bastiensaillant@gmail.com">Email</a>
-                <a href="https://liris.cnrs.fr/page-membre/bastien-saillant">LIRIS</a>
-            </div>
+            <p>&copy; 2026 Bastien Saillant. Tous droits réservés.</p>
         </div>
     </footer>
 
-    <script src="script.js"></script>
 </body>
 </html>
