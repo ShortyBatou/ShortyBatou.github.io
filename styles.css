@@ -155,6 +155,17 @@ section h2 {
     width: 2px;
 }
 
+.timeline a {
+    color: var(--blue);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.social-links a:hover {
+    color: var(--primary-color);
+}
+
 /* Configuration couleur par frise */
 #experience .timeline::before {
     background-color: var(--purple);
@@ -319,6 +330,11 @@ details.timeline-entry[open] .timeline-arrow::after {
     margin-bottom: 0.8rem;
 }
 
+.timeline-body strong {
+    color: var(--text-color);
+}
+
+
 .timeline-list {
     margin: 0.5rem 0 1rem 1.2rem;
     padding: 0;
@@ -328,9 +344,6 @@ details.timeline-entry[open] .timeline-arrow::after {
     margin-bottom: 0.3rem;
 }
 
-.timeline-list strong {
-    color: var(--text-color);
-}
 
 /* ========== SKILLS SECTION ========== */
 
