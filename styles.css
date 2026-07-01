@@ -162,7 +162,7 @@ section h2 {
     transition: color 0.2s ease;
 }
 
-.social-links a:hover {
+.timeline a:hover {
     color: var(--primary-color);
 }
 
@@ -427,5 +427,112 @@ footer {
 
     .timeline-sep {
         display: none;
+    }
+}
+
+
+/* ========== AJOUTS : INFORMATIONS PERSONNELLES ========== */
+.personal-info {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin-bottom: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+}
+
+.personal-info a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.personal-info a:hover {
+    color: var(--blue);
+}
+
+.info-sep {
+    color: var(--border-color);
+    font-weight: 300;
+}
+
+.highlight-link {
+    color: var(--purple) !important;
+    font-weight: 600 !important;
+}
+
+.highlight-link:hover {
+    color: var(--primary-color) !important;
+}
+
+/* ========== AJOUTS : GALERIE D'IMAGES DANS TIMELINE ========== */
+.entry-gallery {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 0;
+    flex-wrap: wrap;
+}
+
+.zoomable-img {
+    width: auto;
+    height: 100px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    cursor: zoom-in;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.zoomable-img:hover {
+    transform: scale(1.03);
+}
+
+.lightbox-dialog {
+    border: none;
+    border-radius: 8px;
+    padding: 0;
+    background: transparent;
+    max-width: 80vw;
+    max-height: 80vh;
+    outline: none;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0; 
+}
+
+.lightbox-dialog img {
+    display: block;
+    max-width: 100%;
+    max-height: 80vh;
+    border-radius: 8px;
+    border: 3px solid var(--white);
+    background-color: var(--white);
+    
+    object-fit: contain; 
+}
+
+.lightbox-dialog::backdrop {
+    background-color: #34495e90; 
+    backdrop-filter: blur(4px);
+}
+
+@media (max-width: 768px) {
+    .personal-info {
+        flex-direction: column;
+        gap: 0.3rem;
+    }
+    .info-sep {
+        display: none;
+    }
+    .zoomable-img {
+        max-width: 100%; /* S'adapte à la largeur mobile */
+    }
+    .lightbox-dialog {
+        max-width: 95vw; /* Plus large sur mobile pour une meilleure visibilité */
     }
 }
