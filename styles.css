@@ -2,23 +2,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 :root {
+    --hide-background : #34495e90;
     --primary-color: #34495e;
     --text-color: #2c3e50;
     --text-light: #5a6c7d;
+    --light: #bdc3c7;
+    --very-light: #ecf0f1;
     --bg-color: #f8fafc;
     --white: #ffffff;
     --light-bg: #f1f5f9;
     --border-color: #c7ccd2;
 
-    
-    /* Code couleur spécifique demandé */
+    --green: #46bd78;
+    --orange: #e18a3d;
+    --red: #d85e50;
     --purple: #9b59b6;
     --purple-light: rgba(155, 89, 182, 0.08);
     --blue: #3498db;
     --blue-light: rgba(52, 152, 219, 0.08);
 }
 
-/* ========== GENERAL STYLES ========== */
 * {
     margin: 0;
     padding: 0;
@@ -81,22 +84,21 @@ body {
     color: var(--primary-color);
 }
 
-/* ========== HERO SECTION ========== */
-#hero {
+#me {
     background-color: var(--white);
     padding: 3rem 0;
     text-align: center;
     border-bottom: 1px solid var(--border-color);
 }
 
-#hero h1 {
+#me h1 {
     font-size: 2.2rem;
     color: var(--primary-color);
     margin-bottom: 0.5rem;
     font-weight: 700;
 }
 
-#hero .subtitle {
+#me .subtitle {
     font-size: 1.1rem;
     color: var(--text-light);
     margin-bottom: 1.2rem;
@@ -120,7 +122,7 @@ body {
     color: var(--primary-color);
 }
 
-/* ========== SECTIONS GENERALES ========== */
+/* ========== SECTIONS ========== */
 section {
     padding: 2.5rem 0;
     border-bottom: 1px solid var(--border-color);
@@ -138,14 +140,13 @@ section h2 {
     position: relative;
 }
 
-/* ========== TIMELINE FRISES ========== */
+/* ========== TIMELINE ========== */
 .timeline {
     position: relative;
     padding-left: 2rem;
     margin-top: 1rem;
 }
 
-/* Ligne verticale de la frise */
 .timeline::before {
     content: '';
     position: absolute;
@@ -185,7 +186,6 @@ section h2 {
     --timeline-color-light: var(--blue-light);
 }
 
-/* Éléments déroulants */
 details.timeline-entry {
     position: relative;
     margin-bottom: 1rem;
@@ -213,7 +213,6 @@ details.timeline-entry::before {
     z-index: 10;
 }
 
-/* Petit triangle pointant vers la carte */
 details.timeline-entry::after {
     content: '';
     position: absolute;
@@ -227,12 +226,11 @@ details.timeline-entry::after {
     z-index: 5;
 }
 
-/* Header cliquable (Sur une seule ligne) */
 summary.timeline-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.9rem 1.2rem;
+    padding: 0.9rem 1.2rem 0.9rem 0.3rem;
     cursor: pointer;
     list-style: none;
     user-select: none;
@@ -244,10 +242,9 @@ summary.timeline-header::-webkit-details-marker {
 
 .timeline-header-main {
     display: flex;
-    justify-content: space-between;
+    justify-content: left;
     align-items: center;
     width: 100%;
-    margin-right: 1.2rem;
     flex-wrap: wrap;
     gap: 0.5rem;
 }
@@ -277,20 +274,30 @@ summary.timeline-header::-webkit-details-marker {
 }
 
 .timeline-date {
+    width: 3rem;
+    text-align: center;
     font-size: 0.85rem;
     color: var(--text-light);
     font-weight: 600;
 }
 
-/* Bouton flèche */
+.timeline-bar {
+    width: 1px;
+    min-height: 3.5rem;
+    border-right: 2px solid var(--light);
+    margin-right: 0.5rem;
+    margin-left: 0.2rem;
+
+}
+
 .timeline-arrow {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 26px;
-    height: 26px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
-    background-color: #f1f5f9;
+    background-color: var(--very-light);
     transition: background-color 0.2s ease;
     flex-shrink: 0;
 }
@@ -300,8 +307,8 @@ summary.timeline-header::-webkit-details-marker {
     display: inline-block;
     width: 5px;
     height: 5px;
-    border-right: 2px solid #64748b;
-    border-bottom: 2px solid #64748b;
+    border-right: 2px solid var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
     transform: rotate(45deg);
     margin-bottom: 2px;
     transition: transform 0.2s ease, margin 0.2s ease;
@@ -317,9 +324,8 @@ details.timeline-entry[open] .timeline-arrow::after {
     margin-bottom: -1px;
 }
 
-/* Corps de l'élément */
 .timeline-body {
-    padding: 0 1.2rem 1.2rem 1.2rem;
+    padding: 0 1.2rem 0 1.2rem;
     border-top: 1px solid var(--border-color);
     padding-top: 1rem;
     font-size: 0.9rem;
@@ -372,6 +378,7 @@ details.timeline-entry[open] .timeline-arrow::after {
 }
 
 .skills-list {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     gap: 0.4rem;
@@ -385,6 +392,22 @@ details.timeline-entry[open] .timeline-arrow::after {
     border: 1px solid var(--border-color);
     border-bottom: 2px solid var(--primary-color);
     font-weight: 500;
+}
+
+.good {
+    border-bottom: 2px solid var(--green);
+}
+
+.medium {
+    border-bottom: 2px solid var(--orange);
+}
+
+.experience {
+    border-bottom: 2px solid var(--purple);
+}
+
+.study {
+    border-bottom: 2px solid var(--blue);
 }
 
 /* ========== INTERACTIFS ========== */
@@ -431,43 +454,8 @@ footer {
 }
 
 
-/* ========== AJOUTS : INFORMATIONS PERSONNELLES ========== */
-.personal-info {
-    font-size: 0.9rem;
-    color: var(--text-light);
-    margin-bottom: 1.2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.8rem;
-    flex-wrap: wrap;
-}
 
-.personal-info a {
-    color: var(--text-color);
-    text-decoration: none;
-    font-weight: 500;
-}
-
-.personal-info a:hover {
-    color: var(--blue);
-}
-
-.info-sep {
-    color: var(--border-color);
-    font-weight: 300;
-}
-
-.highlight-link {
-    color: var(--purple) !important;
-    font-weight: 600 !important;
-}
-
-.highlight-link:hover {
-    color: var(--primary-color) !important;
-}
-
-/* ========== AJOUTS : GALERIE D'IMAGES DANS TIMELINE ========== */
+/* ========== IMAGE IN TIMELINE ========== */
 .entry-gallery {
     display: flex;
     gap: 1rem;
@@ -517,7 +505,7 @@ footer {
 }
 
 .lightbox-dialog::backdrop {
-    background-color: #34495e90; 
+    background-color: var(--hide-background); 
     backdrop-filter: blur(4px);
 }
 
@@ -530,9 +518,9 @@ footer {
         display: none;
     }
     .zoomable-img {
-        max-width: 100%; /* S'adapte à la largeur mobile */
+        max-width: 100%; 
     }
     .lightbox-dialog {
-        max-width: 95vw; /* Plus large sur mobile pour une meilleure visibilité */
+        max-width: 95vw;
     }
 }
