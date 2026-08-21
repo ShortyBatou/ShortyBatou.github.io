@@ -42,7 +42,6 @@ body {
     padding: 0 1.5rem;
 }
 
-
 a {
     color: var(--blue);
     text-decoration: none;
@@ -380,8 +379,7 @@ details.timeline-entry[open] .timeline-arrow::after {
     color: var(--text-color);
     padding: 0.3rem 0.6rem;
     font-size: 0.8rem;
-    border: 1px solid var(--border-color);
-    border-bottom: 2px solid var(--primary-color);
+    border: 1.5px solid var(--border-color);
     font-weight: 500;
 }
 
@@ -514,4 +512,63 @@ footer {
     .lightbox-dialog {
         max-width: 95vw;
     }
+}
+
+.presentation-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.1em;
+}
+
+.presentation {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: #ffffff;
+    padding: 8px;
+    border: 1px solid var(--primary-color); 
+    border-left: 4px solid var(--red); 
+}
+
+.left-red {
+    border-left: 4px solid var(--red); 
+
+}
+
+.left-blue {
+    border-left: 4px solid var(--blue); 
+}
+
+
+.presentation .pres-abstract {
+    height: 40px;
+    font-size: 0.9em;
+    color: var(--primary-color);
+}
+.presentation img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    flex-shrink: 0;
+    border: var(--primary-color) solid 2px; 
+}
+
+.presentation .pres-content {
+    flex : 1;
+    display: flex;
+    flex-direction: column;
+    border-right: var(--primary-color) solid 2px;  
+}
+
+
+.pres-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--primary-color); 
+}
+
+.pres-links {
+    width: 75px;
+    flex: center;
+    padding-left: 8px;
 }
